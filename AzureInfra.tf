@@ -17,6 +17,10 @@
 provider "azurerm" {
   # whilst the `version` attribute is optional, we recommend pinning to a given version of the Provider
   version = "=1.28.0"
+  subscription_id = "7ec0374d-be35-4f14-902b-a88451560734"
+  client_id = "a61f5485-ab20-4ca6-862d-082c1f5e8f72"
+  client_secret = "3e178376-25eb-410f-8dfd-0cd9f242ab8a"
+  tenant_id = "0159e9d0-09a0-4edf-96ba-a3deea363c28"
   # subscription_id = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
   # client_id = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
   # client_secret = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
