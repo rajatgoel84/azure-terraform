@@ -1,18 +1,18 @@
 
 ###CREATE PRINCIPLE
 # az login
-# az account set --subscription="7ec0374d-be35-4f14-902b-a88451560734"
-# az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/7ec0374d-be35-4f14-902b-a88451560734"
+# az account set --subscription="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+# az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
 # principle
 # {
-#   "appId": "a61f5485-ab20-4ca6-862d-082c1f5e8f72",#CLIENT_ID
+#   "appId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",#CLIENT_ID
 #   "displayName": "azure-cli-2019-05-29-03-23-07",
 #   "name": "http://azure-cli-2019-05-29-03-23-07",
-#   "password": "3e178376-25eb-410f-8dfd-0cd9f242ab8a",#CLIENT_SECRET
-#   "tenant": "0159e9d0-09a0-4edf-96ba-a3deea363c28"#TENANT_ID
+#   "password": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",#CLIENT_SECRET
+#   "tenant": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"#TENANT_ID
 # }
 # az login --service-principal -u CLIENT_ID -p CLIENT_SECRET --tenant TENANT_ID
-# example : az login --service-principal -u a61f5485-ab20-4ca6-862d-082c1f5e8f72 -p 3e178376-25eb-410f-8dfd-0cd9f242ab8a --tenant 0159e9d0-09a0-4edf-96ba-a3deea363c28
+# example : az login --service-principal -u XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -p XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX --tenant XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 provider "azurerm" {
   # whilst the `version` attribute is optional, we recommend pinning to a given version of the Provider
