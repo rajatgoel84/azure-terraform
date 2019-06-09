@@ -102,9 +102,14 @@ resource "azurerm_virtual_machine_extension" "cbrecloud_vmiis" {
   type                 = "CustomScriptExtension"
   type_handler_version = "1.9"
 
+  # settings = <<SETTINGS
+  #     { 
+  #       "commandToExecute": "powershell Install-WindowsFeature -Name Web-Server;"
+  #     } 
+  # SETTINGS
   settings = <<SETTINGS
     { 
-      "commandToExecute": "powershell Add-WindowsFeature Web-Asp-Net45;Add-WindowsFeature NET-Framework-45-Core;Add-WindowsFeature Web-Net-Ext45;Add-WindowsFeature Web-ISAPI-Ext;Add-WindowsFeature Web-ISAPI-Filter;Add-WindowsFeature Web-Mgmt-Console;Add-WindowsFeature Web-Scripting-Tools;Add-WindowsFeature Search-Service;Add-WindowsFeature Web-Filtering;Add-WindowsFeature Web-Basic-Auth;Add-WindowsFeature Web-Windows-Auth;Add-WindowsFeature Web-Default-Doc;Add-WindowsFeature Web-Http-Errors;Add-WindowsFeature Web-Static-Content;Add-WindowsFeature Web-Server;"
+      "commandToExecute": "powershell Install-WindowsFeature -Name Web-Asp-Net45,NET-Framework-45-Core,Web-Net-Ext45,Web-ISAPI-Ext,Web-Server;"
     } 
 SETTINGS
 }
